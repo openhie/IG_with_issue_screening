@@ -1,7 +1,11 @@
 # This is a simple workflow that runs the publisher and copies the output to https://<owner>.github.io/<repo>/index.html
 # Based on the instructions from Elliot Silver, available from: https://www.argentixinfo.com/archives/156
-
 # Make sure your repo has a branch called gh-pages
+
+
+# Update 15-Jan-2021: This now adds a FTP upload feature. This uses a repository secret.
+# Action documentation
+# https://github.com/marketplace/actions/ftp-deploy
 
 name: CI
 
@@ -9,9 +13,13 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: 
+      - main
+      - master
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main
+      - master 
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -44,4 +52,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
-          
