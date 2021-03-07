@@ -7,7 +7,7 @@ This is an empty IG
 This ImplementationGuide is published in the following locations:
 
 Continuous Build: __http://build.fhir.org/ig/openhie/fhir-ig-empty/branches/main/index.html__  
-Canonical / permanent URL: 
+Canonical / permanent URL: __https://openhie.github.io/IG_with_issue_screening/index.html__
 <br> </br>
 
 ### Issues
